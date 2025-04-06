@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: Poppins; */
+  font-family: Cormorant;
+  /* font-family: Fraunces; */
+  /* font-family: Inknut Antiqua; */
+}
+body {
+  background-color: #fffdf2;
+}
+
+.main {
+  /* border: 3px dotted green; */
+  position: relative;
+  background-image: url(./kot2-flip.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: block;
+  align-content: center;
+}
+nav {
+  /* border: 3px dotted red; */
+  color: black;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  backdrop-filter: blur(10px);
+}
+.logo {
+  /* border: 1px solid red; */
+  flex-basis: 20%;
+  text-align: center;
+  margin: 15px 0;
+}
+nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ul a {
+  margin-top: 30px;
+  /* border: 1px solid green; */
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bolder;
+  position: relative;
+}
+ul a::after {
+  content: "";
+  background: red;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  opacity: 0;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+ul a:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.opis {
+  display: block;
+  /* border: 3px solid green; */
+  width: fit-content;
+  margin-left: 10vw;
+}
+.opis h1 {
+  font-size: 3rem;
+}
+.opis p {
+  font-size: 20px;
+  line-height: 40px;
+}
+.butt {
+  margin: 40px auto;
+}
+.butt button {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  font-size: 1.3rem;
+  box-shadow: 5px 5px 9px 1px rgba(66, 68, 90, 1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.butt button:hover {
+  background-color: grey;
+  color: white;
+}
+.work {
+  margin: 20vh auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.foto1,
+.foto2,
+.foto3 {
+  flex-basis: 20%;
+}
+.work img {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .opis {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
